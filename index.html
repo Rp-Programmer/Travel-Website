@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travela</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(39,39,39);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav{
+            background-color: rgb(32, 32, 32);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1{
+            font-size: 3rem;
+            position: relative;
+        }
+        nav h1::after{
+            content: 'a';
+            color: orange;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap:20px;
+        }
+        nav ul li a:not(.bookbtn){
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        nav ul li a.bookbtn{
+            text-decoration: none;
+            color: white;
+            background-color: orange;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        nav ul li a::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            width:0;
+            height: 3px;
+            background-color: orange;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover::after{
+            width:100%;
+            left:0;
+        }
+        nav ul li a.bookbtn:hover{
+            background-color: rgb(145, 98, 12);
+            color: black;
+        }
+        .banner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 40px 20px;
+            gap:20px;
+        }
+        .banner h1{
+            font-size: 2.5rem;
+        }
+        .banner h1 span{
+            color: orange;
+        }
+        .banner p{
+            font-family: 1rem;
+            color: rgb(145, 136, 136);
+            text-align: center;
+        }
+        .banner a{
+            text-decoration: none;
+            color: white;
+            background-color: orange;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        .banner a:hover{
+            background-color: rgb(145, 98, 12);
+            color: black;
+        }
+        .banner .slider{
+            overflow: hidden;
+            width: 100%;
+        }
+        .banner .slider .slide{
+            display: flex;
+            flex-direction: row;
+            animation: scroll 15s linear infinite;
+            gap:20px;
+        }
+        .banner .slider .slide .card{
+            flex:0 0 200px;
+            background-color: rgb(71, 66, 66);
+            border-radius: 16px;
+            text-align: center;
+        }
+        .banner .slider .slide .card img{
+            width:100%;
+            object-fit: cover;
+            height: 150px;
+            border-radius: 16px;
+        }
+        .banner .slider .slide:hover{
+            animation-play-state: paused;
+        }
+        .banner .slider .slide .card:hover{
+            border:2px solid orange;
+        }
+        @keyframes scroll{
+            0%{transform: translateX(0);}
+            100%{transform: translateX(-50%);}
+        }
+        .about{
+            display: flex;
+            flex-direction: row;
+            gap:20px;
+            padding: 60px 40px 20px;
+        }
+        .about img{
+            width:500px;
+        }
+        .about .content{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+        }
+        .about .content h1{
+            font-size: 3rem;
+            position: relative;
+        }
+        .about .content h1::after{
+            content: '';
+            background-color: orange;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width:100%;
+            height: 3px;
+        }
+        .services{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            align-items: center;
+            padding: 60px 40px 20px;
+            background-color: rgb(59, 57, 57);
+        }
+        .services h1{
+            font-size: 3rem;
+            position: relative
+
+        }
+        .services h1::after{
+             content: '';
+            background-color: orange;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width:100%;
+            height: 3px;
+        }
+        .services .grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:20px;
+        }
+        .services .grid .sc{
+            padding:40px 20px;
+            text-align: center;
+            background-color: rgb(71, 66, 66);
+            border-radius: 16px;
+        }
+        .services .grid .sc:hover{
+            border: 2px solid orange;
+        }
+        footer{
+            background-color: rgb(32, 32, 32);
+            padding:40px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     
+    <nav>
+         <h1>Travel</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#ser">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="#" class="bookbtn">Book Now</a></li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <h1>Explore The <span>World</span> With Us.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum dolore illum ex aut unde veniam odio expedita inventore dicta, cumque similique libero, voluptates, a minus placeat qui sapiente itaque incidunt.</p>
+        <a href="#">✈ Start Exploring</a>
+        <div class="slider">
+            <div class="slide">
+                <div class="card">
+                    <img src="img/kerala.jpg" alt="Kerala">
+                    <h2>Kerala</h2>
+                    <p>₹12,299</p>
+                </div>
+                <div class="card">
+                    <img src="img/manali.jpg" alt="Kerala">
+                    <h2>Manali</h2>
+                    <p>₹13,299</p>
+                </div>
+                <div class="card">
+                    <img src="img/darjeeling.jpg" alt="Kerala">
+                    <h2>Darjeeling</h2>
+                    <p>₹15,299</p>
+                </div>
+                <div class="card">
+                    <img src="img/rajasthan.jpg" alt="Kerala">
+                    <h2>Rajasthan</h2>
+                    <p>₹15,299</p>
+                </div>
+                <div class="card">
+                    <img src="img/kerala.jpg" alt="Kerala">
+                    <h2>Kerala</h2>
+                    <p>₹12,299</p>
+                </div>
+                <div class="card">
+                    <img src="img/manali.jpg" alt="Kerala">
+                    <h2>Manali</h2>
+                    <p>₹13,299</p>
+                </div>
+                <div class="card">
+                    <img src="img/darjeeling.jpg" alt="Kerala">
+                    <h2>Darjeeling</h2>
+                    <p>₹15,299</p>
+                </div>
+                <div class="card">
+                    <img src="img/rajasthan.jpg" alt="Kerala">
+                    <h2>Rajasthan</h2>
+                    <p>₹15,299</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <img src="img/trust.jpg" alt="trust">
+        <div class="content">
+            <h1>About Us</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt beatae, pariatur iusto porro necessitatibus, quod esse eligendi odit consequatur voluptate itaque dolores vero quaerat. Repellat repellendus similique ut at asperiores!</p>
+        </div>
+    </div>
+    <div class="services" id="ser">
+        <h1>Services</h1>
+        <div class="grid">
+            <div class="sc">
+                <h2>✈</h2>
+                <p>Low-cost Flight</p>
+            </div>
+                        <div class="sc">
+                <h2>👚</h2>
+                <p>Dress Rental</p>
+            </div>
+                        <div class="sc">
+                <h2>🏨</h2>
+                <p>Hotel Reservation</p>
+            </div>
+
+                        <div class="sc">
+                <h2>🚗</h2>
+                <p>Cab Booking</p>
+            </div>
+                        <div class="sc">
+                <h2>📱</h2>
+                <p>24/7 Help Line</p>
+            </div>
+                        <div class="sc">
+                <h2>💳</h2>
+                <p>Flexible Payment</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy;Reserved Rights.Built For Travela Company.</p>
+    </footer>
+</body>
+</html>

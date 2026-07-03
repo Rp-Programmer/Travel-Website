@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travela-Packages</title>
+    <style>
+          *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(39,39,39);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav{
+            background-color: rgb(32, 32, 32);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1{
+            font-size: 3rem;
+            position: relative;
+        }
+        nav h1::after{
+            content: 'a';
+            color: orange;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap:20px;
+        }
+        nav ul li a:not(.bookbtn){
+            text-decoration: none;
+            color: white;
+            background-color: transparent;
+            position: relative;
+            padding-bottom: 4px;
+        }
+        nav ul li a.bookbtn{
+            text-decoration: none;
+            color: white;
+            background-color: orange;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+        nav ul li a::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left:50%;
+            width:0;
+            height: 3px;
+            background-color: orange;
+            transition: all 0.3s ease;
+        }
+        nav ul li a:hover::after{
+            width:100%;
+            left:0;
+        }
+        nav ul li a.bookbtn:hover{
+            background-color: rgb(145, 98, 12);
+            color: black;
+        }
+        .banner{
+            padding: 60px 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            align-items: center;
+            background-color: rgb(39,39,39);
+        }
+        .banner h1{
+            color: orange;
+            font-size: 3rem;
+        }
+        .banner p{
+            color: gray;
+            font-size: 1rem;
+        }
+        .con{
+            background-color: rgb(51, 46, 46);
+            padding:60px 40px 20px;
+        }
+        .con .grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:20px;
+        }
+        .con .grid .card{
+            background-color: rgb(32, 32, 32);
+            text-align: center;
+            width:300px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+        .con .grid .card img{
+            width:100%;
+            object-fit: cover;
+            height: 150px;
+            border-radius: 16px;
+        }
+        .con .grid .card a{
+            text-decoration: none;
+            color: white;
+            background-color: orange;
+            padding: 10px 20px;
+            border-radius: 50px;
+            width:100px;
+        }
+        .con .grid .card a:hover{
+            background-color: rgb(145, 98, 12);
+            color: black;
+        }
+        .con .grid .card:hover{
+            border: 2px solid orange;
+        }
+        footer{
+            background-color: rgb(32, 32, 32);
+            padding:40px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <nav>
+         <h1>Travel</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#ser">Services</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="#" class="bookbtn">Book Now</a></li>
+        </ul>
+    </nav>
+        <div class="banner">
+            <h1>Packages</h1>
+            <p>Choose Our Best Packages.</p>
+        </div>
+            <div class="con">
+                <div class="grid">
+                 <div class="card">
+                    <img src="img/kerala.jpg" alt="Kerala">
+                    <h2>Kerala</h2>
+                    <p>₹12,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+                <div class="card">
+                    <img src="img/manali.jpg" alt="Kerala">
+                    <h2>Manali</h2>
+                    <p>₹13,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+                <div class="card">
+                    <img src="img/darjeeling.jpg" alt="Kerala">
+                    <h2>Darjeeling</h2>
+                    <p>₹15,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+                <div class="card">
+                    <img src="img/rajasthan.jpg" alt="Kerala">
+                    <h2>Rajasthan</h2>
+                    <p>₹15,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+                  <div class="card">
+                    <img src="img/kerala.jpg" alt="Kerala">
+                    <h2>Kerala</h2>
+                    <p>₹12,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+                <div class="card">
+                    <img src="img/manali.jpg" alt="Kerala">
+                    <h2>Manali</h2>
+                    <p>₹13,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+                <div class="card">
+                    <img src="img/darjeeling.jpg" alt="Kerala">
+                    <h2>Darjeeling</h2>
+                    <p>₹15,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+                <div class="card">
+                    <img src="img/rajasthan.jpg" alt="Kerala">
+                    <h2>Rajasthan</h2>
+                    <p>₹15,299</p>
+                    <a href="book.html">Book</a>
+                </div>
+            </div>
+        </div>
+     
+    <footer>
+        <p>&copy;Reserved Rights.Built For Travela Company.</p>
+    </footer>
+    
+</body>
+</html>
